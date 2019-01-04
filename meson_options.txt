@@ -1,0 +1,7 @@
+option('XTENSOR_USE_XSIMD', type: 'boolean', value: false, description: 'simd acceleration for xtensor')
+option('XTENSOR_USE_TBB', type: 'boolean', value: false, description: 'enable parallelization using intel TBB')
+option('BUILD_TESTS', type: 'boolean', value: false, description: 'xtensor test suite')
+option('BUILD_BENCHMARK', type: 'boolean', value: false, description: 'xtensor benchmark')
+option('XTENSOR_ENABLE_ASSERT', type: 'boolean', value: false, description: 'xtensor bound check')
+option('XTENSOR_CHECK_DIMENSION', type: 'boolean', value: false, description: 'xtensor dimension check')
+option('DEFAULT_COLUMN_MAJOR', type: 'boolean', value: false, description: 'set default layout to column major')

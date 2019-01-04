@@ -1,0 +1,5 @@
+[wrap-git]
+directory = xtl
+url = https://github.com/jeandet/xtl.git
+revision = meson
+
