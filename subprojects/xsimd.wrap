@@ -1,0 +1,4 @@
+[wrap-git]
+directory = xsimd
+url = https://github.com/jeandet/xsimd.git
+revision = meson

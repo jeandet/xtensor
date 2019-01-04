@@ -13,7 +13,7 @@ xtensor_dependencies = [dependency('xtl',
 xtensor_cpp_arg = []
 
 if get_option('XTENSOR_USE_XSIMD')
-  xtensor_dependencies+=[dependency('xsimd', version:'>=7.0.0')]
+  xtensor_dependencies+=[dependency('xsimd', version:'>=7.0.0'), fallback : ['xsimd', 'xsimd_dep']]
   xtensor_cpp_arg = ['-DXTENSOR_USE_XSIMD']
 endif
 
