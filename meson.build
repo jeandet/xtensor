@@ -13,7 +13,7 @@ xtensor_dependencies = [dependency('xtl',
 xtensor_cpp_arg = []
 
 if get_option('XTENSOR_USE_XSIMD')
-  xtensor_dependencies+=[dependency('xsimd', version:'>=7.0.0'), fallback : ['xsimd', 'xsimd_dep']]
+  xtensor_dependencies+=[dependency('xsimd', version:'>=7.0.0', fallback : ['xsimd', 'xsimd_dep'])]
   xtensor_cpp_arg = ['-DXTENSOR_USE_XSIMD']
 endif
 
@@ -191,8 +191,8 @@ if get_option('BUILD_TESTS')
   test('xtensor-test', test_exe, workdir : meson.current_source_dir()+'/test')
 
   benchmark_dep = dependency('benchmark', fallback : ['google-benchmark', 'google_benchmark_dep'])
-  benchmark_exe = executable('xsimd-benchmark', benchmark_sources,
+  benchmark_exe = executable('xtensor-benchmark', benchmark_sources,
                              dependencies : [xtensor_dep, benchmark_dep],
                              cpp_args:cpp_args)
-  benchmark('xsimd-benchmark', benchmark_exe, timeout:3600)
+  benchmark('xtensor-benchmark', benchmark_exe, timeout:3600)
 endif
